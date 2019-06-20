@@ -23,12 +23,16 @@ export default {
       return `${this.name} ${this.surname}`
     },
     age() {
+      return this.calculAge(this.birthdate)
+    }
+  },
+  methods: {
+    calculAge(date) {
       let today = new Date()
-      let diff = today - this.birthdate
+      let diff = today - date
 
       // seconds, minutes, hours, days, years
       return Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
-
     }
   }
 }
