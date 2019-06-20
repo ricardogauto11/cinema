@@ -1,12 +1,23 @@
 <template>
   <div id="app" class="principal">
-    <span>App</span>
+    <span>{{ titulo }}</span>
+    <entry></entry>
   </div>
 </template>
 
 <script>
+import Entry from '@/views/Entry.vue'
+
 export default {
-  
+  name: 'App',
+  data() {
+    return {
+      titulo: 'Tickets'
+    }
+  },
+  components: {
+    Entry
+  }
 }
 </script>
 
@@ -16,7 +27,7 @@ html {
 }
 
 .principal {
-  background-color:darkred;
+  background-color: #F78154;
   padding: 10px;
   color: white;
   border-radius: 5px;
